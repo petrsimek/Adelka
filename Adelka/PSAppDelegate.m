@@ -18,66 +18,15 @@
 {
 }
 
-- (void)insertPathIntoTree:(NSString *)f match:(NSTextCheckingResult *)match tree:(NSMutableDictionary *)tree fqn:(NSString *)fqn
+- (void)awakeFromNib
 {
-	for (int i = 1, count = [match numberOfRanges]; i < count; i++)
-	{
-		NSString *component = [f substringWithRange:[match rangeAtIndex:i]];
+	statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+	[statusItem setImage:[NSImage imageNamed:@"Adelka"]];
+	[statusItem setHighlightMode:YES];
+	[statusItem setMenu:statusMenu];
 
-		if (i == count - 1 /*&& [component hasSuffix:@".pack"]*/)
-		{
-			[tree setObject:fqn forKey:component];
-		}
-
-		else
-		{
-			NSMutableDictionary *nextBranch = [tree objectForKey:component];
-			if (!nextBranch)
-			{
-				nextBranch = [NSMutableDictionary dictionary];
-				[tree setObject:nextBranch forKey:component];
-			}
-			tree = nextBranch;
-		}
-	}
-}
-
-- (void)traverseOneLevel:(id)object depth:(int)depth parent:(id)parent menuitem:(NSMenuItem *)menuitem
-{
-	if ([object isKindOfClass:[NSDictionary class]])
-	{
-		NSMenu *submenu = [menuitem submenu];
-
-		if (submenu == nil)
-		{
-			submenu = [[NSMenu alloc] init];
-			[menuitem setSubmenu:submenu];
-		}
-		else
-		{
-			[submenu removeAllItems];
-		}
-
-		for (NSString *key in [object allKeys])
-		{
-			id child = [object objectForKey:key];
-
-			NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:key action:nil keyEquivalent:@"" ];
-
-			[item setEnabled:YES];
-
-			[submenu addItem:item];
-
-			[self traverseOneLevel:child depth:depth + 1 parent:object menuitem:item];
-		}
-	}
-	else
-	{
-		[menuitem setRepresentedObject:object];
-		[menuitem setTarget:self];
-		[menuitem setEnabled:YES];
-		[menuitem setAction:@selector(menuItemClicked:) ];
-	}
+	[statusMenu setAutoenablesItems:YES];
+	[statusMenu setDelegate:self];
 }
 
 - (void)menuWillOpen:(NSMenu *)menu
@@ -140,19 +89,74 @@
 	}
 }
 
-- (void)awakeFromNib
-{
-	statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-	[statusItem setImage:[NSImage imageNamed:@"Adelka"]];
-	[statusItem setHighlightMode:YES];
-	[statusItem setMenu:statusMenu];
-
-	[statusMenu setAutoenablesItems:YES];
-	[statusMenu setDelegate:self];
-}
-
 - (IBAction)menuItemClicked:sender {
 	[[NSWorkspace sharedWorkspace] openFile:[sender representedObject]];
+}
+
+- (IBAction)menuItemQuitClicked:sender {
+    [[NSApplication sharedApplication] terminate:nil];
+}
+
+- (void)insertPathIntoTree:(NSString *)f match:(NSTextCheckingResult *)match tree:(NSMutableDictionary *)tree fqn:(NSString *)fqn
+{
+	for (int i = 1, count = [match numberOfRanges]; i < count; i++)
+	{
+		NSString *component = [f substringWithRange:[match rangeAtIndex:i]];
+
+		if (i == count - 1 /*&& [component hasSuffix:@".pack"]*/)
+		{
+			[tree setObject:fqn forKey:component];
+		}
+
+		else
+		{
+			NSMutableDictionary *nextBranch = [tree objectForKey:component];
+			if (!nextBranch)
+			{
+				nextBranch = [NSMutableDictionary dictionary];
+				[tree setObject:nextBranch forKey:component];
+			}
+			tree = nextBranch;
+		}
+	}
+}
+
+- (void)traverseOneLevel:(id)object depth:(int)depth parent:(id)parent menuitem:(NSMenuItem *)menuitem
+{
+	if ([object isKindOfClass:[NSDictionary class]])
+	{
+		NSMenu *submenu = [menuitem submenu];
+
+		if (submenu == nil)
+		{
+			submenu = [[NSMenu alloc] init];
+			[menuitem setSubmenu:submenu];
+		}
+		else
+		{
+			[submenu removeAllItems];
+		}
+
+		for (NSString *key in [object allKeys])
+		{
+			id child = [object objectForKey:key];
+
+			NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:key action:nil keyEquivalent:@"" ];
+
+			[item setEnabled:YES];
+
+			[submenu addItem:item];
+
+			[self traverseOneLevel:child depth:depth + 1 parent:object menuitem:item];
+		}
+	}
+	else
+	{
+		[menuitem setRepresentedObject:object];
+		[menuitem setTarget:self];
+		[menuitem setEnabled:YES];
+		[menuitem setAction:@selector(menuItemClicked:) ];
+	}
 }
 
 @end
