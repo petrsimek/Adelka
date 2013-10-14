@@ -10,7 +10,6 @@
 		53524379180BDCC300EFA104 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53524378180BDCC300EFA104 /* Cocoa.framework */; };
 		53524383180BDCC300EFA104 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53524381180BDCC300EFA104 /* InfoPlist.strings */; };
 		53524385180BDCC300EFA104 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53524384180BDCC300EFA104 /* main.m */; };
-		53524389180BDCC300EFA104 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 53524387180BDCC300EFA104 /* Credits.rtf */; };
 		5352438C180BDCC300EFA104 /* PSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5352438B180BDCC300EFA104 /* PSAppDelegate.m */; };
 		5352438F180BDCC300EFA104 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5352438D180BDCC300EFA104 /* MainMenu.xib */; };
 		53524391180BDCC300EFA104 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53524390180BDCC300EFA104 /* Images.xcassets */; };
@@ -18,6 +17,8 @@
 		53524399180BDCC400EFA104 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53524378180BDCC300EFA104 /* Cocoa.framework */; };
 		535243A1180BDCC400EFA104 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5352439F180BDCC400EFA104 /* InfoPlist.strings */; };
 		535243A3180BDCC400EFA104 /* AdelkaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 535243A2180BDCC400EFA104 /* AdelkaTests.m */; };
+		535243B8180BEA9300EFA104 /* Adelka.png in Resources */ = {isa = PBXBuildFile; fileRef = 535243B6180BEA9300EFA104 /* Adelka.png */; };
+		535243B9180BEA9300EFA104 /* Adelka@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 535243B7180BEA9300EFA104 /* Adelka@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		53524382180BDCC300EFA104 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53524384180BDCC300EFA104 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		53524386180BDCC300EFA104 /* Adelka-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Adelka-Prefix.pch"; sourceTree = "<group>"; };
-		53524388180BDCC300EFA104 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		5352438A180BDCC300EFA104 /* PSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAppDelegate.h; sourceTree = "<group>"; };
 		5352438B180BDCC300EFA104 /* PSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAppDelegate.m; sourceTree = "<group>"; };
 		5352438E180BDCC300EFA104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -50,6 +50,8 @@
 		5352439E180BDCC400EFA104 /* AdelkaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdelkaTests-Info.plist"; sourceTree = "<group>"; };
 		535243A0180BDCC400EFA104 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		535243A2180BDCC400EFA104 /* AdelkaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdelkaTests.m; sourceTree = "<group>"; };
+		535243B6180BEA9300EFA104 /* Adelka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Adelka.png; sourceTree = "<group>"; };
+		535243B7180BEA9300EFA104 /* Adelka@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Adelka@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +120,7 @@
 				5352438A180BDCC300EFA104 /* PSAppDelegate.h */,
 				5352438B180BDCC300EFA104 /* PSAppDelegate.m */,
 				5352438D180BDCC300EFA104 /* MainMenu.xib */,
-				53524390180BDCC300EFA104 /* Images.xcassets */,
+				535243BA180BEBD400EFA104 /* Images */,
 				5352437F180BDCC300EFA104 /* Supporting Files */,
 			);
 			path = Adelka;
@@ -131,7 +133,6 @@
 				53524381180BDCC300EFA104 /* InfoPlist.strings */,
 				53524384180BDCC300EFA104 /* main.m */,
 				53524386180BDCC300EFA104 /* Adelka-Prefix.pch */,
-				53524387180BDCC300EFA104 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,6 +153,16 @@
 				5352439F180BDCC400EFA104 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		535243BA180BEBD400EFA104 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				53524390180BDCC300EFA104 /* Images.xcassets */,
+				535243B6180BEA9300EFA104 /* Adelka.png */,
+				535243B7180BEA9300EFA104 /* Adelka@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,10 +242,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				535243B9180BEA9300EFA104 /* Adelka@2x.png in Resources */,
 				53524383180BDCC300EFA104 /* InfoPlist.strings in Resources */,
 				53524391180BDCC300EFA104 /* Images.xcassets in Resources */,
-				53524389180BDCC300EFA104 /* Credits.rtf in Resources */,
 				5352438F180BDCC300EFA104 /* MainMenu.xib in Resources */,
+				535243B8180BEA9300EFA104 /* Adelka.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,14 +295,6 @@
 				53524382180BDCC300EFA104 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		53524387180BDCC300EFA104 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				53524388180BDCC300EFA104 /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		5352438D180BDCC300EFA104 /* MainMenu.xib */ = {
