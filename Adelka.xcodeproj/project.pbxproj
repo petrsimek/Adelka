@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53524379180BDCC300EFA104 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53524378180BDCC300EFA104 /* Cocoa.framework */; };
+		53524383180BDCC300EFA104 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53524381180BDCC300EFA104 /* InfoPlist.strings */; };
+		53524385180BDCC300EFA104 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53524384180BDCC300EFA104 /* main.m */; };
+		53524389180BDCC300EFA104 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 53524387180BDCC300EFA104 /* Credits.rtf */; };
+		5352438C180BDCC300EFA104 /* PSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5352438B180BDCC300EFA104 /* PSAppDelegate.m */; };
+		5352438F180BDCC300EFA104 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5352438D180BDCC300EFA104 /* MainMenu.xib */; };
+		53524391180BDCC300EFA104 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53524390180BDCC300EFA104 /* Images.xcassets */; };
+		53524398180BDCC300EFA104 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53524397180BDCC300EFA104 /* XCTest.framework */; };
+		53524399180BDCC400EFA104 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53524378180BDCC300EFA104 /* Cocoa.framework */; };
+		535243A1180BDCC400EFA104 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5352439F180BDCC400EFA104 /* InfoPlist.strings */; };
+		535243A3180BDCC400EFA104 /* AdelkaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 535243A2180BDCC400EFA104 /* AdelkaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5352439A180BDCC400EFA104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5352436D180BDCC300EFA104 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53524374180BDCC300EFA104;
+			remoteInfo = Adelka;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		53524375180BDCC300EFA104 /* Adelka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adelka.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53524378180BDCC300EFA104 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5352437B180BDCC300EFA104 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5352437C180BDCC300EFA104 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5352437D180BDCC300EFA104 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		53524380180BDCC300EFA104 /* Adelka-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Adelka-Info.plist"; sourceTree = "<group>"; };
+		53524382180BDCC300EFA104 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		53524384180BDCC300EFA104 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53524386180BDCC300EFA104 /* Adelka-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Adelka-Prefix.pch"; sourceTree = "<group>"; };
+		53524388180BDCC300EFA104 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		5352438A180BDCC300EFA104 /* PSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAppDelegate.h; sourceTree = "<group>"; };
+		5352438B180BDCC300EFA104 /* PSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAppDelegate.m; sourceTree = "<group>"; };
+		5352438E180BDCC300EFA104 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		53524390180BDCC300EFA104 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		53524396180BDCC300EFA104 /* AdelkaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdelkaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53524397180BDCC300EFA104 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5352439E180BDCC400EFA104 /* AdelkaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AdelkaTests-Info.plist"; sourceTree = "<group>"; };
+		535243A0180BDCC400EFA104 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		535243A2180BDCC400EFA104 /* AdelkaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdelkaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53524372180BDCC300EFA104 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53524379180BDCC300EFA104 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53524393180BDCC300EFA104 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53524399180BDCC400EFA104 /* Cocoa.framework in Frameworks */,
+				53524398180BDCC300EFA104 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5352436C180BDCC300EFA104 = {
+			isa = PBXGroup;
+			children = (
+				5352437E180BDCC300EFA104 /* Adelka */,
+				5352439C180BDCC400EFA104 /* AdelkaTests */,
+				53524377180BDCC300EFA104 /* Frameworks */,
+				53524376180BDCC300EFA104 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53524376180BDCC300EFA104 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53524375180BDCC300EFA104 /* Adelka.app */,
+				53524396180BDCC300EFA104 /* AdelkaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53524377180BDCC300EFA104 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53524378180BDCC300EFA104 /* Cocoa.framework */,
+				53524397180BDCC300EFA104 /* XCTest.framework */,
+				5352437A180BDCC300EFA104 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5352437A180BDCC300EFA104 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5352437B180BDCC300EFA104 /* AppKit.framework */,
+				5352437C180BDCC300EFA104 /* CoreData.framework */,
+				5352437D180BDCC300EFA104 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5352437E180BDCC300EFA104 /* Adelka */ = {
+			isa = PBXGroup;
+			children = (
+				5352438A180BDCC300EFA104 /* PSAppDelegate.h */,
+				5352438B180BDCC300EFA104 /* PSAppDelegate.m */,
+				5352438D180BDCC300EFA104 /* MainMenu.xib */,
+				53524390180BDCC300EFA104 /* Images.xcassets */,
+				5352437F180BDCC300EFA104 /* Supporting Files */,
+			);
+			path = Adelka;
+			sourceTree = "<group>";
+		};
+		5352437F180BDCC300EFA104 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53524380180BDCC300EFA104 /* Adelka-Info.plist */,
+				53524381180BDCC300EFA104 /* InfoPlist.strings */,
+				53524384180BDCC300EFA104 /* main.m */,
+				53524386180BDCC300EFA104 /* Adelka-Prefix.pch */,
+				53524387180BDCC300EFA104 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5352439C180BDCC400EFA104 /* AdelkaTests */ = {
+			isa = PBXGroup;
+			children = (
+				535243A2180BDCC400EFA104 /* AdelkaTests.m */,
+				5352439D180BDCC400EFA104 /* Supporting Files */,
+			);
+			path = AdelkaTests;
+			sourceTree = "<group>";
+		};
+		5352439D180BDCC400EFA104 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5352439E180BDCC400EFA104 /* AdelkaTests-Info.plist */,
+				5352439F180BDCC400EFA104 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53524374180BDCC300EFA104 /* Adelka */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 535243A6180BDCC400EFA104 /* Build configuration list for PBXNativeTarget "Adelka" */;
+			buildPhases = (
+				53524371180BDCC300EFA104 /* Sources */,
+				53524372180BDCC300EFA104 /* Frameworks */,
+				53524373180BDCC300EFA104 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Adelka;
+			productName = Adelka;
+			productReference = 53524375180BDCC300EFA104 /* Adelka.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53524395180BDCC300EFA104 /* AdelkaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 535243A9180BDCC400EFA104 /* Build configuration list for PBXNativeTarget "AdelkaTests" */;
+			buildPhases = (
+				53524392180BDCC300EFA104 /* Sources */,
+				53524393180BDCC300EFA104 /* Frameworks */,
+				53524394180BDCC300EFA104 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5352439B180BDCC400EFA104 /* PBXTargetDependency */,
+			);
+			name = AdelkaTests;
+			productName = AdelkaTests;
+			productReference = 53524396180BDCC300EFA104 /* AdelkaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5352436D180BDCC300EFA104 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Petr Šimek";
+				TargetAttributes = {
+					53524395180BDCC300EFA104 = {
+						TestTargetID = 53524374180BDCC300EFA104;
+					};
+				};
+			};
+			buildConfigurationList = 53524370180BDCC300EFA104 /* Build configuration list for PBXProject "Adelka" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5352436C180BDCC300EFA104;
+			productRefGroup = 53524376180BDCC300EFA104 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53524374180BDCC300EFA104 /* Adelka */,
+				53524395180BDCC300EFA104 /* AdelkaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53524373180BDCC300EFA104 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53524383180BDCC300EFA104 /* InfoPlist.strings in Resources */,
+				53524391180BDCC300EFA104 /* Images.xcassets in Resources */,
+				53524389180BDCC300EFA104 /* Credits.rtf in Resources */,
+				5352438F180BDCC300EFA104 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53524394180BDCC300EFA104 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				535243A1180BDCC400EFA104 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53524371180BDCC300EFA104 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53524385180BDCC300EFA104 /* main.m in Sources */,
+				5352438C180BDCC300EFA104 /* PSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53524392180BDCC300EFA104 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				535243A3180BDCC400EFA104 /* AdelkaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5352439B180BDCC400EFA104 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53524374180BDCC300EFA104 /* Adelka */;
+			targetProxy = 5352439A180BDCC400EFA104 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		53524381180BDCC300EFA104 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53524382180BDCC300EFA104 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		53524387180BDCC300EFA104 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53524388180BDCC300EFA104 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		5352438D180BDCC300EFA104 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5352438E180BDCC300EFA104 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		5352439F180BDCC400EFA104 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				535243A0180BDCC400EFA104 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		535243A4180BDCC400EFA104 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		535243A5180BDCC400EFA104 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		535243A7180BDCC400EFA104 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Adelka/Adelka-Prefix.pch";
+				INFOPLIST_FILE = "Adelka/Adelka-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		535243A8180BDCC400EFA104 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Adelka/Adelka-Prefix.pch";
+				INFOPLIST_FILE = "Adelka/Adelka-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		535243AA180BDCC400EFA104 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Adelka.app/Contents/MacOS/Adelka";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Adelka/Adelka-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AdelkaTests/AdelkaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		535243AB180BDCC400EFA104 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Adelka.app/Contents/MacOS/Adelka";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Adelka/Adelka-Prefix.pch";
+				INFOPLIST_FILE = "AdelkaTests/AdelkaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53524370180BDCC300EFA104 /* Build configuration list for PBXProject "Adelka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				535243A4180BDCC400EFA104 /* Debug */,
+				535243A5180BDCC400EFA104 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		535243A6180BDCC400EFA104 /* Build configuration list for PBXNativeTarget "Adelka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				535243A7180BDCC400EFA104 /* Debug */,
+				535243A8180BDCC400EFA104 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		535243A9180BDCC400EFA104 /* Build configuration list for PBXNativeTarget "AdelkaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				535243AA180BDCC400EFA104 /* Debug */,
+				535243AB180BDCC400EFA104 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5352436D180BDCC300EFA104 /* Project object */;
+}
