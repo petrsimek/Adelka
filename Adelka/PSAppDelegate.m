@@ -102,14 +102,22 @@
 	for (int i = 1, count = [match numberOfRanges]; i < count; i++)
 	{
 		NSString *component = [f substringWithRange:[match rangeAtIndex:i]];
+        
+        if (i == 2){
+            component =  [NSString stringWithFormat:@"%@...",[component substringWithRange:NSMakeRange(0, 12)]];
+        }
 
 		if (i == count - 1 /*&& [component hasSuffix:@".pack"]*/)
 		{
+       
+            
 			[tree setObject:fqn forKey:component];
 		}
 
 		else
 		{
+            
+            
 			NSMutableDictionary *nextBranch = [tree objectForKey:component];
 			if (!nextBranch)
 			{
