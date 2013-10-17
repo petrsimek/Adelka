@@ -13,8 +13,16 @@ Screenshot
 ----------
 ![Screenshot](https://raw.github.com/petrsimek/Adelka/master/screenshot.png)
 
+Why
+---
+Because the access via Finder seems little bit obscure and annoying. See, e.g.: http://stackoverflow.com/q/4646692/603878
+
+Name
+----
+The utility is named after one of my daughters. She is best in search for things I've misplaced somewhere. :-) 
+
 TODO
 ----
-* Search more locations (eg. iPad simulator) 
+* Search more locations (e.g. iPad simulator) 
 * Asynchronous menu update (with a progress indicator).
-* Android support?
+* Android Emulator support?
