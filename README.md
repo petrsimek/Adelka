@@ -23,6 +23,5 @@ The utility is named after one of my daughters. She is best in search for things
 
 TODO
 ----
-* Search more locations (e.g. iPad simulator) 
-* Asynchronous menu update (with a progress indicator).
+* Search more locations (e.g. iPad simulator)
 * Android Emulator support?
