@@ -1,6 +1,6 @@
 //
 //  PSAppDelegate.m
-//  SQLite Access Tool
+//  Adelka
 //
 //  Created by Petr Šimek on 05.10.13.
 //  Copyright (c) 2013 Petr Šimek. All rights reserved.
@@ -11,6 +11,7 @@
 #import <AppKit/AppKit.h>
 #import <stdarg.h>
 
+#import "PSProgressViewController.h"
 
 @implementation PSAppDelegate
 
@@ -27,9 +28,79 @@
 
 	[statusMenu setAutoenablesItems:YES];
 	[statusMenu setDelegate:self];
+
+	databasesMenuItem = [[NSMenuItem alloc]
+						 initWithTitle:@"Databases"
+								action:@selector(menuItemClicked:)
+						 keyEquivalent:@""];
+
+	[databasesMenuItem setTarget:self];
+	[databasesMenuItem setEnabled:NO];
+	[statusMenu insertItem:databasesMenuItem atIndex:0];
+
+	pVC = [[PSProgressViewController alloc] initWithNibName:@"ProgressView" bundle:nil];
+	databasesProgressMenuItem = [[NSMenuItem alloc]
+								 initWithTitle:@""
+										action:@selector(menuItemClicked:)
+								 keyEquivalent:@""];
+	[databasesProgressMenuItem setView:[pVC view]];
+	[databasesProgressMenuItem setTarget:self];
 }
 
 - (void)menuWillOpen:(NSMenu *)menu
+{
+	startedAnim = false;
+	stoppedAnim = false;
+
+	NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(animateProgress:) userInfo:nil repeats:YES];
+	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSEventTrackingRunLoopMode];
+
+	isScanned = false;
+
+	[self someMethod:^(BOOL result) {
+		 NSLog(@"%@", tree);
+
+		 [self traverseOneLevel:tree depth:0 parent:tree menuitem:databasesMenuItem];
+
+		 isScanned = true;
+	 }];
+}
+
+- (void)someMethod:(void (^)(BOOL result))completionHandler
+{
+	[[[NSOperationQueue alloc] init] addOperationWithBlock:^{
+		 tree = [NSMutableDictionary dictionary];
+
+	     //   [NSThread sleepForTimeInterval:1.0f];
+		 [self scanFilesIntoTree:tree];
+		 [[NSOperationQueue currentQueue] addOperationWithBlock:^{
+				  completionHandler(YES);
+			  }];
+	 }];
+}
+
+- (void)animateProgress:(NSTimer *)timer
+{
+	if (isScanned && startedAnim)
+	{
+		[[pVC progressIndicator] stopAnimation:[pVC progressIndicator]];
+		[databasesMenuItem setEnabled:YES];
+		[statusMenu removeItemAtIndex:1];
+		[statusMenu setMenuChangedMessagesEnabled:YES];
+		startedAnim = false;
+		stoppedAnim = true;
+	}
+	else if (!isScanned && !startedAnim && !stoppedAnim)
+	{
+		[[pVC progressIndicator] startAnimation:[pVC progressIndicator]];
+		[databasesMenuItem setEnabled:NO];
+		[statusMenu insertItem:databasesProgressMenuItem atIndex:1];
+		startedAnim = true;
+		stoppedAnim = false;
+	}
+}
+
+- (void)scanFilesIntoTree:(NSMutableDictionary *)treeX
 {
 	NSString *dir =
 		[NSString stringWithFormat:@"%@/Library/Application Support/iPhone Simulator", NSHomeDirectory()];
@@ -38,8 +109,6 @@
 	NSFileManager *fm = [NSFileManager defaultManager];
 
 	BOOL isDir;
-
-	NSMutableDictionary *tree = [NSMutableDictionary dictionary];
 
 	if (dir && ([fm fileExistsAtPath:dir isDirectory:&isDir] && isDir))
 	{
@@ -74,18 +143,13 @@
 											  range:NSMakeRange(0, [f length])
 										 usingBlock:^(NSTextCheckingResult *match,
 													  NSMatchingFlags flags, BOOL *stop) {
-						 [self insertPathIntoTree:f match:match tree:tree fqn:fqn];
+						 [self insertPathIntoTree:f match:match tree:treeX fqn:fqn];
 					 }];
 
 					[contents addObject:fqn];
 				}
 			}
 		}
-
-
-		NSLog(@"%@", tree);
-
-		[self traverseOneLevel:tree depth:0 parent:tree menuitem:[statusMenu itemWithTag:102]];
 	}
 }
 
@@ -94,37 +158,34 @@
 }
 
 - (IBAction)menuItemQuitClicked:sender {
-    [[NSApplication sharedApplication] terminate:nil];
+	[[NSApplication sharedApplication] terminate:nil];
 }
 
-- (void)insertPathIntoTree:(NSString *)f match:(NSTextCheckingResult *)match tree:(NSMutableDictionary *)tree fqn:(NSString *)fqn
+- (void)insertPathIntoTree:(NSString *)f match:(NSTextCheckingResult *)match tree:(NSMutableDictionary *)localTree fqn:(NSString *)fqn
 {
-	for (int i = 1, count = [match numberOfRanges]; i < count; i++)
+	for (NSInteger i = 1, count = [match numberOfRanges]; i < count; i++)
 	{
 		NSString *component = [f substringWithRange:[match rangeAtIndex:i]];
-        
-        if (i == 2){
-            component =  [NSString stringWithFormat:@"%@...",[component substringWithRange:NSMakeRange(0, 12)]];
-        }
 
-		if (i == count - 1 /*&& [component hasSuffix:@".pack"]*/)
+		if (i == 2)
 		{
-       
-            
-			[tree setObject:fqn forKey:component];
+			component =  [NSString stringWithFormat:@"%@...", [component substringWithRange:NSMakeRange(0, 12)]];
+		}
+
+		if (i == count - 1)
+		{
+			[localTree setObject:fqn forKey:component];
 		}
 
 		else
 		{
-            
-            
 			NSMutableDictionary *nextBranch = [tree objectForKey:component];
 			if (!nextBranch)
 			{
 				nextBranch = [NSMutableDictionary dictionary];
-				[tree setObject:nextBranch forKey:component];
+				[localTree setObject:nextBranch forKey:component];
 			}
-			tree = nextBranch;
+			localTree = nextBranch;
 		}
 	}
 }
@@ -133,6 +194,7 @@
 {
 	if ([object isKindOfClass:[NSDictionary class]])
 	{
+		[menuitem setEnabled:YES];
 		NSMenu *submenu = [menuitem submenu];
 
 		if (submenu == nil)

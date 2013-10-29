@@ -7,13 +7,23 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PSProgressViewController.h"
 
-@interface PSAppDelegate : NSObject <NSApplicationDelegate,NSMenuDelegate> {
-    
+@interface PSAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate> {
+	IBOutlet NSMenu *statusMenu;
+	NSStatusItem *statusItem;
 
-    IBOutlet NSMenu *statusMenu;
-    NSStatusItem * statusItem;
-    
+	PSProgressViewController *pVC;
+
+	bool isScanned;
+	bool startedAnim, stoppedAnim;
+
+	NSMutableDictionary *tree;
+
+	NSMenuItem *databasesMenuItem;
+	NSMenuItem *databasesProgressMenuItem;
+
+	NSView *mView;
 }
 
 

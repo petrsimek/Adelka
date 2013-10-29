@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5324A1E418206504003045ED /* AdelkaApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 5324A1E318206504003045ED /* AdelkaApp.png */; };
+		532E07E318166CA000A54DE3 /* PSProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532E07E218166CA000A54DE3 /* PSProgressViewController.m */; };
+		532E07E61816CAF700A54DE3 /* PSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 532E07E51816CAF700A54DE3 /* PSProgressView.m */; };
 		53524379180BDCC300EFA104 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53524378180BDCC300EFA104 /* Cocoa.framework */; };
 		53524383180BDCC300EFA104 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53524381180BDCC300EFA104 /* InfoPlist.strings */; };
 		53524385180BDCC300EFA104 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53524384180BDCC300EFA104 /* main.m */; };
@@ -19,7 +22,7 @@
 		535243A3180BDCC400EFA104 /* AdelkaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 535243A2180BDCC400EFA104 /* AdelkaTests.m */; };
 		535243B8180BEA9300EFA104 /* Adelka.png in Resources */ = {isa = PBXBuildFile; fileRef = 535243B6180BEA9300EFA104 /* Adelka.png */; };
 		535243B9180BEA9300EFA104 /* Adelka@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 535243B7180BEA9300EFA104 /* Adelka@2x.png */; };
-		5369ECEB180C212700A56F6D /* AdelkaApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 5369ECEA180C212700A56F6D /* AdelkaApp.png */; };
+		5369ED7D1816585E00A56F6D /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5369ED7C1816585E00A56F6D /* ProgressView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5324A1E318206504003045ED /* AdelkaApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdelkaApp.png; sourceTree = "<group>"; };
+		532E07E118166CA000A54DE3 /* PSProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSProgressViewController.h; sourceTree = "<group>"; };
+		532E07E218166CA000A54DE3 /* PSProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSProgressViewController.m; sourceTree = "<group>"; };
+		532E07E41816CAF700A54DE3 /* PSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSProgressView.h; sourceTree = "<group>"; };
+		532E07E51816CAF700A54DE3 /* PSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSProgressView.m; sourceTree = "<group>"; };
 		53524375180BDCC300EFA104 /* Adelka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adelka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53524378180BDCC300EFA104 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5352437B180BDCC300EFA104 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -53,7 +61,7 @@
 		535243A2180BDCC400EFA104 /* AdelkaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdelkaTests.m; sourceTree = "<group>"; };
 		535243B6180BEA9300EFA104 /* Adelka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Adelka.png; sourceTree = "<group>"; };
 		535243B7180BEA9300EFA104 /* Adelka@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Adelka@2x.png"; sourceTree = "<group>"; };
-		5369ECEA180C212700A56F6D /* AdelkaApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdelkaApp.png; sourceTree = SOURCE_ROOT; };
+		5369ED7C1816585E00A56F6D /* ProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +129,12 @@
 			children = (
 				5352438A180BDCC300EFA104 /* PSAppDelegate.h */,
 				5352438B180BDCC300EFA104 /* PSAppDelegate.m */,
+				532E07E41816CAF700A54DE3 /* PSProgressView.h */,
+				532E07E51816CAF700A54DE3 /* PSProgressView.m */,
 				5352438D180BDCC300EFA104 /* MainMenu.xib */,
+				5369ED7C1816585E00A56F6D /* ProgressView.xib */,
+				532E07E118166CA000A54DE3 /* PSProgressViewController.h */,
+				532E07E218166CA000A54DE3 /* PSProgressViewController.m */,
 				535243BA180BEBD400EFA104 /* Images */,
 				5352437F180BDCC300EFA104 /* Supporting Files */,
 			);
@@ -160,7 +173,7 @@
 		535243BA180BEBD400EFA104 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				5369ECEA180C212700A56F6D /* AdelkaApp.png */,
+				5324A1E318206504003045ED /* AdelkaApp.png */,
 				53524390180BDCC300EFA104 /* Images.xcassets */,
 				535243B6180BEA9300EFA104 /* Adelka.png */,
 				535243B7180BEA9300EFA104 /* Adelka@2x.png */,
@@ -245,12 +258,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5324A1E418206504003045ED /* AdelkaApp.png in Resources */,
+				5369ED7D1816585E00A56F6D /* ProgressView.xib in Resources */,
 				535243B9180BEA9300EFA104 /* Adelka@2x.png in Resources */,
 				53524383180BDCC300EFA104 /* InfoPlist.strings in Resources */,
 				53524391180BDCC300EFA104 /* Images.xcassets in Resources */,
 				5352438F180BDCC300EFA104 /* MainMenu.xib in Resources */,
 				535243B8180BEA9300EFA104 /* Adelka.png in Resources */,
-				5369ECEB180C212700A56F6D /* AdelkaApp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				53524385180BDCC300EFA104 /* main.m in Sources */,
+				532E07E318166CA000A54DE3 /* PSProgressViewController.m in Sources */,
+				532E07E61816CAF700A54DE3 /* PSProgressView.m in Sources */,
 				5352438C180BDCC300EFA104 /* PSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

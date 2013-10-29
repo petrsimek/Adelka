@@ -20,9 +20,6 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu title="Main" id="ZMP-jy-Dph">
             <items>
-                <menuItem title="Databases" tag="102" id="ki7-20-V5o">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
                 <menuItem isSeparatorItem="YES" id="ruc-wm-KCq"/>
                 <menuItem title="Quit" id="y2q-f6-887">
                     <modifierMask key="keyEquivalentModifierMask"/>
