@@ -23,5 +23,4 @@ The utility is named after one of my daughters. She is best in search for things
 
 TODO
 ----
-* Search more locations (e.g. iPad simulator)
 * Android Emulator support?
