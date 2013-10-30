@@ -1,7 +1,7 @@
 Adelka
 ======
 
-Utility for an easy access of Core Data SQLite databases created in iPhone Simulator.
+Utility for an easy access of Core Data SQLite databases created in iOS Simulator.
 
 Features
 --------
