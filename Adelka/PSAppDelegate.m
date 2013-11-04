@@ -58,8 +58,6 @@
 	isScanned = false;
 
 	[self someMethod:^(BOOL result) {
-		 NSLog(@"%@", tree);
-
 		 [self traverseOneLevel:tree depth:0 parent:tree menuitem:databasesMenuItem];
 
 		 isScanned = true;
@@ -100,7 +98,7 @@
 	}
 }
 
-- (void)scanFilesIntoTree:(NSMutableDictionary *)treeX
+- (void)scanFilesIntoTree:(NSMutableDictionary *)localTree
 {
 	NSString *dir =
 		[NSString stringWithFormat:@"%@/Library/Application Support/iPhone Simulator", NSHomeDirectory()];
@@ -143,7 +141,7 @@
 											  range:NSMakeRange(0, [f length])
 										 usingBlock:^(NSTextCheckingResult *match,
 													  NSMatchingFlags flags, BOOL *stop) {
-						 [self insertPathIntoTree:f match:match tree:treeX fqn:fqn];
+						 [self insertPathIntoTree:f match:match tree:localTree fqn:fqn];
 					 }];
 
 					[contents addObject:fqn];
@@ -210,13 +208,9 @@
 		for (NSString *key in [object allKeys])
 		{
 			id child = [object objectForKey:key];
-
 			NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:key action:nil keyEquivalent:@"" ];
-
 			[item setEnabled:YES];
-
 			[submenu addItem:item];
-
 			[self traverseOneLevel:child depth:depth + 1 parent:object menuitem:item];
 		}
 	}
